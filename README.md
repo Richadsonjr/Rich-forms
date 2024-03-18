@@ -39,7 +39,7 @@ Para usar esta library, primeiro você precisa instalá-la em seu projeto. Você
 npm install Rich-Forms-br
 ```
 
-###Funções Disponíveis
+### Funções Disponíveis
 ```JavaScript
 MakeaFormsDB(srcRoot, dataConection, opc)
 ```
@@ -48,7 +48,7 @@ Esta função gera um arquivo de configuração com os campos e botões para cad
 **srcRoot**: O caminho raiz onde os arquivos serão criados.
 dataConection: Os detalhes da conexão com o banco de dados.
 **opc**: Uma opção opcional.
-###MakeaTableDB
+### MakeaTableDB
 ```JavaScript
 MakeaTableDB(srcRoot, dataConection, opc)
 ```
@@ -66,7 +66,7 @@ var conection = {
 }
 ```
 **opc**: Uma opção opcional.
-###makeFormView
+### makeFormView
 ```JavaScript
 makeFormView(url, view, operation)
 ```
@@ -75,7 +75,7 @@ Esta função gera o HTML da tabela informada para inclusão ou edição.
 **url**: O caminho para a pasta onde o arquivo JSON de configuração está localizado.
 **view**: A view da tabela para a qual o HTML será gerado.
 **operation**: A operação a ser realizada ('new' ou 'edit').
-###makeTableView
+### makeTableView
 ```JavaScript
 makeTableView(url, view, operation)
 ```
@@ -85,7 +85,7 @@ Esta função gera o HTML da tabela informada para visualização.
 **view**: A view da tabela para a qual o HTML será gerado.
 **Operation**: A operação a ser realizada ('new' ou 'edit').
 
-###saveHTMLView
+### saveHTMLView
 ```JavaScript
 saveHTMLView(outputSRC, URLInput, view, operation)
 ```
@@ -96,7 +96,7 @@ Esta função gera e salva um arquivo HTML na pasta indicada.
 **view**: A view da tabela para a qual o HTML será gerado.
 **operation**: A operação a ser realizada ('new' ou 'edit').
 
-###saveHTMLTableView
+### saveHTMLTableView
 ```JavaScript
 saveHTMLTableView(outputSRC, URLInput, view)
 ```
@@ -106,7 +106,7 @@ Esta função gera e salva um arquivo HTML da tabela na pasta indicada.
 **URLInput**: O caminho para a pasta onde o arquivo JSON de configuração está localizado.
 
 **view**: A view da tabela para a qual o HTML será gerado.
-###Exemplo de Uso
+### Exemplo de Uso
 ```javascript
 const { MakeaFormsDB, saveHTMLView } = require('nomedalib');
 
