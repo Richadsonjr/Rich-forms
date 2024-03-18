@@ -117,5 +117,6 @@ const dataConection = {
 MakeaFormsDB(srcRoot, dataConection);
 saveHTMLView(srcRoot, './caminho/para/o/arquivo.json', 'minhaView', 'new');
 ```
-###Contribuindo
+### Contribuindo
+
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request
