@@ -1,31 +1,35 @@
 ### Documentação da Rich-Forms-BR
 
-Esta biblioteca é um conjunto de funções em JavaScript que interagem com um banco de dados MySQL para gerar arquivos de configuração e arquivos HTML com base nas tabelas presentes no banco de dados. Vou descrever brevemente as principais funcionalidades e partes do código:
+Esta biblioteca é um conjunto de funções em JavaScript que interagem com um banco de dados MySQL para gerar arquivos de configuração e arquivos HTML com base nas tabelas presentes no banco de dados.
+Vou descrever brevemente as principais funcionalidades e partes do código:
 
 **Funções Principais:**
-
-**MakeaFormsDB:** Esta função cria arquivos de configuração com campos e botões para cada tabela do banco de dados fornecido.
-**makeFormView:** Gera HTML para uma visualização de formulário com base nos dados de entrada.
-**saveHTMLView:** Salva o HTML gerado em um arquivo no sistema de arquivos.
-**MakeaTableDB:** Cria arquivos de configuração para visualizações de tabela.
-**makeTableView:** Gera HTML para uma visualização de tabela.
-**saveHTMLTableView:** Salva o HTML gerado para a visualização de tabela em um arquivo no sistema de arquivos.
-
+* MakeaFormsDB: Esta função cria arquivos de configuração com campos e botões para cada tabela do banco de dados fornecido.
+* makeFormView: Gera HTML para uma visualização de formulário com base nos dados de entrada.
+* saveHTMLView: Salva o HTML gerado em um arquivo no sistema de arquivos.
+* MakeaTableDB: Cria arquivos de configuração para visualizações de tabela.
+* makeTableView: Gera HTML para uma visualização de tabela.
+* saveHTMLTableView: Salva o HTML gerado para a visualização de tabela em um arquivo no sistema de arquivos.
 
 **Fluxo Principal:**
 
--- A função MakeaFormsDB é chamada para criar arquivos de configuração com campos e botões para cada tabela do banco de dados.
--- A função makeFormView é chamada para gerar a visualização do formulário.
--- A função saveHTMLView é chamada para salvar o HTML gerado em um arquivo.
+* A função MakeaFormsDB é chamada para criar arquivos de configuração com campos e botões para cada tabela do banco de dados.
+
+* A função makeFormView é chamada para gerar a visualização do formulário.
+
+* A função saveHTMLView é chamada para salvar o HTML gerado em um arquivo.
+
 Similarmente, funções semelhantes são usadas para tabelas.
 
-Processamento de Dados:
+**Processamento de Dados:**
 
 O código faz uso extensivo de consultas SQL para obter informações sobre as tabelas e campos do banco de dados.
 Com base nessas informações, ele gera configurações de campos e botões para as visualizações de formulário e tabela.
-Manipulação de Arquivos:
+
+**Manipulação de Arquivos:**
 
 A biblioteca utiliza o módulo fs para manipulação de arquivos, incluindo verificação de existência, escrita e leitura de arquivos.
+
 Em resumo, esta biblioteca é útil para automatizar a geração de formulários e visualizações de tabela para um banco de dados MySQL, simplificando o processo de desenvolvimento web para aplicativos que interagem com bancos de dados.
 
 ### Instalação
@@ -117,5 +121,5 @@ const dataConection = {
 MakeaFormsDB(srcRoot, dataConection);
 saveHTMLView(srcRoot, './caminho/para/o/arquivo.json', 'minhaView', 'new');
 ```
-###Contribuindo
+### Contribuindo
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request
