@@ -1,0 +1,53 @@
+{
+    "name": "rich-forms-br",
+    "version": "1.0.0",
+    "description": "Esta biblioteca é um conjunto de funções em JavaScript que interagem com um banco de dados MySQL para gerar arquivos de configuração e arquivos HTML com base nas tabelas presentes no banco de dados.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Richadsonjr/Rich-utils-br.git"
+    },
+    "author": "Richadson Santos",
+    "license": "ISC",
+    "keywords": [
+        "Brasil",
+        "utils",
+        "web",
+        "developer",
+        "export",
+        "exportar",
+        "MySQL",
+        "Formulários",
+        "Visualizações de Tabela",
+        "Desenvolvimento Web",
+        "Automação",
+        "Manipulação de Banco de Dados",
+        "Node",
+        "HTML Dinâmico",
+        "Interação com Banco de Dados",
+        "Banco de Dados",
+        "Configuração",
+        "HTML Generation",
+        "File",
+        "System",
+        "Web Development Tools",
+        "Queries",
+        "Formulários",
+        "Visualizações de Dados Dinâmicas",
+        "Arquitetura",
+        "Aplicativos Web"
+    ],
+    "bugs": {
+        "url": "https://github.com/Richadsonjr/Rich-utils-br/issues"
+    },
+    "homepage": "https://github.com/Richadsonjr/Rich-utils-br",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "mysql": "^2.18.1",
+        "mysql2": "^3.9.2",
+        "rich-utils-br": "^1.0.7"
+    }
+}
