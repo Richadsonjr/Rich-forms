@@ -27,7 +27,7 @@ const MakeaFormsDB = async(srcRoot, dataConection, opc = 0) => {
 
 
             // // Caminho da pasta onde o arquivo será criado
-            // const urlSRC = '/caminho/para/sua/pasta/';
+            const urlSRC = srcRoot;
 
             // Nome do arquivo
             var tabela = tabelas[i][nomeDB]
@@ -344,8 +344,7 @@ const MakeaTableDB = async(srcRoot, dataConection, opc = 0) => {
 
 
             // // Caminho da pasta onde o arquivo será criado
-            // const urlSRC = '/caminho/para/sua/pasta/';
-
+            const urlSRC = srcRoot;
             // Nome do arquivo
             var tabela = tabelas[i][nomeDB]
             const fileName = `Table_${tabela}.json`;
