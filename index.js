@@ -184,6 +184,7 @@ const MakeaFormsDB = async(srcRoot, dataConection, opc = 0) => {
 // makeFormView(urlSRC, conectionX)
 
 // gera o html da tabela informada seja para inclusão ou edição 
+
 const makeFormView = (url = null, view = null, operation = 'new') => {
     var urlSRC = url
     var viewX = view
@@ -191,8 +192,16 @@ const makeFormView = (url = null, view = null, operation = 'new') => {
     if (urlSRC === null) { return 'Falha ao capturar localização dos arquivos de view.' }
     if (viewX === null) { return 'View não informada.' }
 
-    var dataurl = `${urlSRC}/${view}.json`
-    var dataJson = require(dataurl)
+    var dataurl = `${urlSRC}/${view}.json`;
+
+    let dataJson;
+    try {
+        const jsonData = fs.readFileSync(dataurl, 'utf8');
+        dataJson = JSON.parse(jsonData);
+    } catch (error) {
+        console.error('Erro ao ler ou analisar o arquivo JSON:', error);
+        return 'Erro ao ler ou analisar o arquivo JSON.';
+    }
 
     var botoes = dataJson.Buttons
     var inputs = dataJson.InputsConfig
@@ -208,7 +217,6 @@ const makeFormView = (url = null, view = null, operation = 'new') => {
             let propriedades_Inputs = inputs[i].props
             if (propriedades_Inputs.length > 0) {
                 propriedades_Inputs.forEach(objeto => {
-                    // Usando Object.entries() para obter um array de [chave, valor]
                     Object.entries(objeto).forEach(([chave, valor]) => {
                         propsInput = `${chave}="${valor}"`
                     });
@@ -292,31 +300,39 @@ const makeFormView = (url = null, view = null, operation = 'new') => {
 
 // gera o html da tabela informada seja para inclusão ou edição 
 const makeTableView = (url = null, view = null, operation = 'new') => {
-    var urlSRC = url
-    var viewX = view
-    var operacao = operation
-    if (urlSRC === null) { return 'Falha ao capturar localização dos arquivos de view.' }
-    if (viewX === null) { return 'View não informada.' }
+    var urlSRC = url;
+    var viewX = view;
+    var operacao = operation;
+    if (urlSRC === null) { return 'Falha ao capturar localização dos arquivos de view.'; }
+    if (viewX === null) { return 'View não informada.'; }
 
-    var dataurl = `${urlSRC}/${view}.json`
-    var dataJson = require(dataurl)
+    var dataurl = `${urlSRC}/${view}.json`;
+    let dataJson;
+    try {
+        // Lendo o arquivo JSON de forma síncrona
+        const jsonData = fs.readFileSync(dataurl, 'utf8');
+        // Convertendo o JSON para objeto JavaScript
+        dataJson = JSON.parse(jsonData);
+    } catch (error) {
+        console.error('Erro ao ler ou analisar o arquivo JSON:', error);
+        return 'Erro ao ler ou analisar o arquivo JSON.';
+    }
 
-    var HeadersConfig = dataJson.HeadersConfig
+    var HeadersConfig = dataJson.HeadersConfig;
+    console.log(dataJson.HeadersConfig)
     var html = `<div class="container">
-    <div class="table-responsive">
-    <table class="table table-primary table-striplad" id="${viewX}">
+        <div class="table-responsive">
+        <table class="table table-primary table-striped" id="${viewX}">
         <thead>
-            <tr>`
+        <tr>`;
     for (let i = 0; i < HeadersConfig.length; i++) {
-
-
-        html += `<th scope="col">${HeadersConfig[i]}</th>`
+        html += `<th scope="col">${HeadersConfig[i]}</th>`;
     }
     html += `</tr></thead><tbody id="body_${viewX}"></tbody></table></div></div></p>`;
 
     return html;
 }
-
+};
 
 
 
