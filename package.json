@@ -1,6 +1,6 @@
 {
     "name": "rich-forms-br",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "Esta biblioteca é um conjunto de funções em JavaScript que interagem com um banco de dados MySQL para gerar arquivos de configuração e arquivos HTML com base nas tabelas presentes no banco de dados.",
     "main": "index.js",
     "scripts": {
@@ -46,6 +46,7 @@
     "homepage": "https://github.com/Richadsonjr/rich-forms-br",
     "dependencies": {
         "body-parser": "^1.20.2",
+        "fs": "^0.0.1-security",
         "mysql": "^2.18.1",
         "mysql2": "^3.9.2"
     }

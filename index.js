@@ -332,7 +332,6 @@ const makeTableView = (url = null, view = null, operation = 'new') => {
 
     return html;
 }
-};
 
 
 
